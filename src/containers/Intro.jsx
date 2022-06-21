@@ -2,18 +2,25 @@ import React, {useRef} from 'react'
 import Typewriter from 'typewriter-effect';
 import '../css/Intro.css'
 
-function Intro (){
+function Intro ({ introInterfazRef }){
   const date = new Date()
   const day = date.getDate()
   const month = date.getDay()
   const year = date.getFullYear()
-
   const containerRef = useRef(null)
 
   const containerDisabled =  () =>{
     containerRef.current.className = "disapearText"
     setTimeout(() => {
       containerRef.current.style.display = "none"
+      introInterfazRef.current.style.display = "inline"
+    }, 1500)
+  }
+
+  const containerEnabled = () =>{
+    containerRef.current.className = "disapearText"
+    setTimeout(() => {
+      containerRef.current.style.display = "inline"
     }, 1500)
   }
 
@@ -73,7 +80,7 @@ function Intro (){
           .typeString('<br>Theodore Kaczynski -----------------------> <span class="red"> --ESTADO--</span> ID: 04475-046')
           .typeString('<br>Clement Hampton -------------------------> <span class="red"> --ESTADO--</span> ID: 34854-054')
           .typeString('<br>Salvador Magluta --------------------------> <span class="red"> --ESTADO--</span> ID: 26012-037')
-          .pauseFor(1500)
+          .pauseFor(500)
           .changeDelay(40)
           .typeString('<br><br>Seleccionando recluso ID: 20081-997 - NOMBRE: Gian Franco Lombardini')
           .pauseFor(1500)
