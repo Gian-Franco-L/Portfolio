@@ -2,7 +2,7 @@ import React, {useRef} from 'react'
 import Typewriter from 'typewriter-effect';
 import '../css/Intro.css'
 
-function Intro ({ introInterfazRef }){
+function Intro ({ introInterfaceRef }){
   const date = new Date()
   const day = date.getDate()
   const month = date.getDay()
@@ -13,15 +13,10 @@ function Intro ({ introInterfazRef }){
     containerRef.current.className = "disapearText"
     setTimeout(() => {
       containerRef.current.style.display = "none"
-      introInterfazRef.current.style.display = "inline"
     }, 1500)
-  }
-
-  const containerEnabled = () =>{
-    containerRef.current.className = "disapearText"
-    setTimeout(() => {
-      containerRef.current.style.display = "inline"
-    }, 1500)
+    setTimeout(() =>{
+      introInterfaceRef.current.style.display = "inline"
+    }, 3000)
   }
 
   return(

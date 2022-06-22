@@ -1,0 +1,246 @@
+.backgroundBlack{
+  height: 92vh;
+  width: 187vh;
+  margin-left: 2%;
+  margin-top: 2%;
+  background-color: rgb(10, 10, 10);
+  border: 1px solid rgb(150, 0, 0);
+  transform: scale(0);
+  animation: container;
+  animation-duration: 3s;
+  animation-timing-function:cubic-bezier();
+  animation-fill-mode: forwards;
+}
+@keyframes container{
+  50%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(0.99);
+  }
+}
+
+.topLeftArrow{
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 48%;
+  left: 49%;
+  transform: rotate(0deg) scale(0);
+  background: linear-gradient(-45deg, rgb(255, 255, 255) 50%, transparent 25%) 0px 0px;
+  background-size: 36px 35px;
+  animation: firstArrow;
+  animation-duration: 3s;
+  animation-timing-function:cubic-bezier();
+  animation-fill-mode: forwards;
+}
+@keyframes firstArrow{
+  50%{
+    transform: rotate(180deg) scale(1)
+  }
+  100%{
+    transform: rotate(180deg) translateX(869px) translateY(423px)
+  }
+}
+
+
+.topRightArrow{
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 48%;
+  left: 49.1%;
+  transform: rotate(90deg) scale(0);
+  background: linear-gradient(-45deg, rgb(255, 255, 255) 50%, transparent 25%) 0px 0px;
+  background-size: 36px 35px;
+  animation: secondArrow;
+  animation-duration: 3s;
+  animation-timing-function:cubic-bezier();
+  animation-fill-mode: forwards;
+}
+@keyframes secondArrow{
+  50%{
+    transform: rotate(-90deg) scale(1)
+  }
+  100%{
+    transform: rotate(-90deg) translateY(869px) translateX(423px)
+  }
+}
+
+
+
+.bottomLeftArrow{
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 48%;
+  left: 49.1%;
+  transform: rotate(-90deg) scale(0);
+  background: linear-gradient(-45deg, rgb(255, 255, 255) 50%, transparent 25%) 0px 0px;
+  background-size: 36px 35px;
+  animation: thirdArrow;
+  animation-duration: 3s;
+  animation-timing-function:cubic-bezier();
+  animation-fill-mode: forwards;
+}
+@keyframes thirdArrow{
+  50%{
+    transform: rotate(90deg) scale(1)
+  }
+  100%{
+    transform: rotate(90deg) translateY(869px) translateX(423px)
+  }
+}
+
+.bottomRightArrow{
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 48%;
+  left: 49%;
+  transform: rotate(180deg) scale(0);
+  background: linear-gradient(-45deg, rgb(255, 255, 255) 50%, transparent 25%) 0px 0px;
+  background-size: 36px 35px;
+  animation: fourthArrow;
+  animation-duration: 3s;
+  animation-timing-function:cubic-bezier();
+  animation-fill-mode: forwards;
+}
+@keyframes fourthArrow{
+  50%{
+    transform: rotate(0deg) scale(1)
+  }
+  100%{
+    transform: rotate(0deg) translateX(869px) translateY(423px)
+  }
+}
+
+.topRectangleQualities{
+  position: absolute;
+  width: 20px;
+  height: 6px;
+  background-color: rgb(110, 0, 0);
+  transform-origin: right;
+  animation-fill-mode: forwards;
+}
+.topRectangleTopLine{
+  top: 8%;
+  left: 3.75%;
+  transform: scaleX(0);
+  animation-name: longLineTop;
+  animation-duration: 5s;
+  animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+@keyframes longLineTop{
+  60%{
+    transform: rotate(180deg) scaleX(0);
+  }
+  100%{
+    transform: rotate(180deg) scaleX(60);
+  }
+}
+.topRectangleBottomLine{
+  top: 39.4%;
+  left: 68.65%;
+  transform: scaleX(0);
+  animation-name: longLineBottom;
+  animation-duration: 5s;
+  animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+@keyframes longLineBottom{
+  60%{
+    transform: scaleX(0);
+  }
+  100%{
+    transform: scaleX(60);
+  }
+}
+.topRectangleLeftLine{
+  top: 39.4%;
+  left: 3.9%;
+  transform: rotate(90deg) scaleX(0);
+  animation-name: shortLineLeft;
+  animation-duration: 7s;
+  animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+@keyframes shortLineLeft{
+  75%{
+    transform: rotate(90deg) scaleX(0);
+  }
+  100%{
+    transform: rotate(90deg) scaleX(15);
+  }
+}
+.topRectangleRightLine{
+  top: 8%;
+  left: 68.5%;
+  transform: rotate(-90deg) scaleX(0);
+  animation-name: shortLineRight;
+  animation-duration: 7s;
+  animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+@keyframes shortLineRight{
+  75%{
+    transform: rotate(-90deg) scaleX(0);
+  }
+  100%{
+    transform: rotate(-90deg) scaleX(15);
+  }
+}
+
+.midRectangleQualities{
+  position: absolute;
+  width: 20px;
+  height: 6px;
+  top: 50%;
+  background-color: rgb(110, 0, 0);
+  transform-origin: right;
+  animation-fill-mode: forwards;
+}
+
+.midRectangleTopLine{
+  left: 3.75%;
+  animation-name: longLineTop;
+  transform: scaleX(0);
+  animation-duration: 5s;
+  animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.midRectangleBottomLine{
+  top: 69.4%;
+  left: 68.65%;
+  transform: scaleX(0);
+  animation-name: longLineBottom;
+  animation-duration: 5s;
+  animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.midRectangleLeftLine{
+  top: 69.4%;
+  left: 3.9%;
+  transform: rotate(90deg) scaleX(0);
+  animation-name: midShortLineLeft;
+  animation-duration: 7s;
+  animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+@keyframes midShortLineLeft{
+  75%{
+    transform: rotate(90deg) scaleX(0);
+  }
+  100%{
+    transform: rotate(90deg) scaleX(9.1);
+  }
+}
+.midRectangleRightLine{
+  left: 68.5%;
+  transform: rotate(-90deg) scaleX(0);
+  animation-name: midShortLineRight;
+  animation-duration: 7s;
+  animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+@keyframes midShortLineRight{
+  75%{
+    transform: rotate(-90deg) scaleX(0);
+  }
+  100%{
+    transform: rotate(-90deg) scaleX(9.1);
+  }
+}
