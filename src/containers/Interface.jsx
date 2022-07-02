@@ -1,21 +1,33 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import styled from 'styled-components'
 import '../css/Interface.css'
+import { FaCheck } from 'react-icons/fa';
 
 function Interface ({ introInterfaceRef }){
-  const items = ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Node", "MongoDB", "Express"]
+  const tecToolsDataB = ["HTML", "CSS", "JavaScript", "Git/Github", "SASS", "TypeScript", "React", "NextJS", "Node", "MongoDB", "Express", "Rest API"]
   const [list, setList] = useState([])
+  let desapearLoader = document.querySelector(".divLoader")
+  let deseapearButton = useRef(null)
+  let pipe = 0
 
-  function asd(){
-    for(let i=0; i<7; i++){
-      setTimeout(()=>{
-        setList(prev =>[items[i], ...prev])
-      }, ((i+1)*2000))
+function fillTecToolsDataB(){
+  new Promise (() =>{
+    if(pipe==0)
+    {
+      deseapearButton.current.style.display = "none"
+      pipe=1
+      for(let i=0; i<12; i++){
+        setTimeout(()=>{
+          setList(prev =>[tecToolsDataB[i], ...prev])
+        }, ((i+1)*1000))
+      }
     }
-  }
-  function dsa(){
-    console.log(list);
-  }
+  })
+  .then(() =>{
+    pipe=0
+    desapearLoader.style.opacity = "0"
+  })
+}
 
   return(
     <MainContainer ref={introInterfaceRef}>
@@ -24,16 +36,39 @@ function Interface ({ introInterfaceRef }){
       <div className='bottomLeftArrow'></div>
       <div className='bottomRightArrow'></div>
       <div className='backgroundBlack'>
-        <div className='topRectangle'></div>
-        <div className='midRectangle'></div>
-        <div className='bottomLeftRectangle'></div>
-        <div className='bottomRightRectangle'></div>
-          <button onClick={asd}>fill</button>
-          <button onClick={dsa}>see</button>
+        {
+          list[0]
+          &&
+          <div className='divLoader'>
+            <div className='preloader'>
+              <img src="https://i.imgur.com/cWGLRFJ.png" alt="" />
+            </div>
+          </div>
+        }
+        <div className='topRectangle'>
+        </div>
+        <div className='midRectangle'>
+        </div>
+        <div className='bottomLeftRectangle'>
+        </div>
+        <div className='bottomRightRectangle'>
+        </div>
         <div className='rightRectangle'>
-          {list}
-          <div className='preloader'>
-            <img src="https://i.imgur.com/cWGLRFJ.png" alt="" />
+          <div className='rectanglesApearAnimation'>
+            <p className='rightRectangleTitle'>Conocimientos</p>
+            {list[0]==null && <button ref={deseapearButton} className='divButtons rightRectangleButton' onClick={fillTecToolsDataB}>Escanear</button>}
+            {list[0] && <div className='flexWord'><div>{list[0]}</div><div className='completeWord'><FaCheck/></div></div>}
+            {list[1] && <div className='flexWord'><div>{list[1]}</div><div className='completeWord'><FaCheck/></div></div>}
+            {list[2] && <div className='flexWord'><div>{list[2]}</div><div className='completeWord'><FaCheck/></div></div>}
+            {list[3] && <div className='flexWord'><div>{list[3]}</div><div className='completeWord'><FaCheck/></div></div>}
+            {list[4] && <div className='flexWord'><div>{list[4]}</div><div className='completeWord'><FaCheck/></div></div>}
+            {list[5] && <div className='flexWord'><div>{list[5]}</div><div className='completeWord'><FaCheck/></div></div>}
+            {list[6] && <div className='flexWord'><div>{list[6]}</div><div className='completeWord'><FaCheck/></div></div>}
+            {list[7] && <div className='flexWord'><div>{list[7]}</div><div className='completeWord'><FaCheck/></div></div>}
+            {list[8] && <div className='flexWord'><div>{list[8]}</div><div className='completeWord'><FaCheck/></div></div>}
+            {list[9] && <div className='flexWord'><div>{list[9]}</div><div className='completeWord'><FaCheck/></div></div>}
+            {list[10] && <div className='flexWord'><div>{list[10]}</div><div className='completeWord'><FaCheck/></div></div>}
+            {list[11] && <div className='flexWord'><div>{list[11]}</div><div className='completeWord'><FaCheck/></div></div>}
           </div>
         </div>
       </div>
