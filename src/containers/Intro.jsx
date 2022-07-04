@@ -80,7 +80,7 @@ function Intro ({ introInterfaceRef }){
           .changeDelay(30)
           .typeString('<br><br>Seleccionando recluso ID: 20081-997 - NOMBRE: Gian Franco Lombardini')
           .pauseFor(1500)
-          .typeString('<br>Iniciando interfaz grafica mas detallada')
+          .typeString('<br>Iniciando interfaz grafica mas detallada... require reparacion.')
           .pauseFor(1500)
           .callFunction(containerDisabled)
           .start();

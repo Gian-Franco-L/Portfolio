@@ -46,8 +46,20 @@ function fillTecToolsDataB(){
           </div>
         }
         <div className='topRectangle'>
+          <div className='image'></div>
+          <div className='topRectangleContent'>
+            <div className='topRectangleLetterStyle'>Nombre: Gian Franco Lombardini</div>
+            <div className='topRectangleLetterStyle'>Pais: Argentina</div>
+            <div className='topRectangleLetterStyle'>Provincia: Buenos Aires</div>
+            <div className='topRectangleLetterStyle'>Edad: 25 años</div>
+            <div className='topRectangleLetterStyle'>Delito: Nula experiencia laboral en TI</div>
+            <div className='topRectangleLetterStyle'>Condena: Estudiar para siempre</div>
+            <div className='topRectangleLetterStyle'>Objetivo: Frontend Developer</div>
+            <div className='topRectangleLetterStyle'>Estado: Desempleado</div>
+          </div>
         </div>
         <div className='midRectangle'>
+          
         </div>
         <div className='bottomLeftRectangle'>
         </div>
@@ -55,7 +67,7 @@ function fillTecToolsDataB(){
         </div>
         <div className='rightRectangle'>
           <div className='rectanglesApearAnimation'>
-            <p className='rightRectangleTitle'>Conocimientos</p>
+            <p className='rightRectangleTitle'>Conocimientos:</p>
             {list[0]==null && <button ref={deseapearButton} className='divButtons rightRectangleButton' onClick={fillTecToolsDataB}>Escanear</button>}
             {list[0] && <div className='flexWord'><div>{list[0]}</div><div className='completeWord'><FaCheck/></div></div>}
             {list[1] && <div className='flexWord'><div>{list[1]}</div><div className='completeWord'><FaCheck/></div></div>}
