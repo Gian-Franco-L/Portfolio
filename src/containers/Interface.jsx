@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react'
 import styled from 'styled-components'
 import '../css/Interface.css'
-import { FaCheck } from 'react-icons/fa';
+import { FaCheck, FaInstagram, FaWhatsapp, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 function Interface ({ introInterfaceRef }){
   const tecToolsDataB = ["HTML", "CSS", "JavaScript", "Git/Github", "SASS", "TypeScript", "React", "NextJS", "Node", "MongoDB", "Express", "Rest API"]
@@ -12,7 +12,7 @@ function Interface ({ introInterfaceRef }){
 
 function fillTecToolsDataB(){
   new Promise (() =>{
-    if(pipe==0)
+    if(pipe===0)
     {
       deseapearButton.current.style.display = "none"
       pipe=1
@@ -47,26 +47,45 @@ function fillTecToolsDataB(){
         }
         <div className='topRectangle'>
           <div className='image'></div>
-          <div className='topRectangleContent'>
+          <div className='topRectangleContent apearAnimation'>
             <div className='topRectangleLetterStyle'>Nombre: Gian Franco Lombardini</div>
             <div className='topRectangleLetterStyle'>Pais: Argentina</div>
             <div className='topRectangleLetterStyle'>Provincia: Buenos Aires</div>
             <div className='topRectangleLetterStyle'>Edad: 25 años</div>
             <div className='topRectangleLetterStyle'>Delito: Nula experiencia laboral en TI</div>
             <div className='topRectangleLetterStyle'>Condena: Estudiar para siempre</div>
-            <div className='topRectangleLetterStyle'>Objetivo: Frontend Developer</div>
+            <div className='topRectangleLetterStyle'>Especializacion: Frontend Developer</div>
             <div className='topRectangleLetterStyle'>Estado: Desempleado</div>
           </div>
         </div>
         <div className='midRectangle'>
-          
+          <div className='midRectangleLetterStyle apearAnimation'><b>Primer contacto con la programacion: [</b> Año: 2018 --- Facultad: UTN --- Carrera: Ingenieria Electronica --- Lenguaje: C --- Tiempo: 2 años <b>]</b></div>
+          <div className='midRectangleLetterStyle apearAnimation'><b>Primer contacto con la programacion web: [</b> Año: 2021 --- Curso: Plataforma5 --- Lenguajes: HTML/CSS/Javascript --- Tiempo: 3 meses <b>]</b></div>
+          <div className='midRectangleLetterStyle apearAnimation'><b>Experiencia y progreso actual: [</b> Forma: Autodidacta --- Fuentes: Platzi --- Actualmente: Perfeccionando Frontend --- Tiempo: 1 año <b>]</b></div>
+          <div></div>
         </div>
         <div className='bottomLeftRectangle'>
+          <div className='projectsContainers firstProject apearAnimation'>
+            <div className=' projectImg'></div>
+            <div className='projectName'>Color Game</div>
+          </div>
+          <div className='projectsContainers secondProject apearAnimation'>
+            <div className=' projectImg'></div>
+            <div className='projectName'>Weather Chanel</div>
+          </div>
+          <div className='projectsContainers thirdProject apearAnimation'>
+            <div className=' projectImg'></div>
+            <div className='projectName'>Market</div>
+          </div>
         </div>
         <div className='bottomRightRectangle'>
+            <FaWhatsapp className='icon apearAnimation'/>
+            <FaInstagram className='icon apearAnimation'/>
+            <FaLinkedin className='icon apearAnimation'/>
+            <FaGithub className='icon apearAnimation'/>
         </div>
         <div className='rightRectangle'>
-          <div className='rectanglesApearAnimation'>
+          <div className='apearAnimation'>
             <p className='rightRectangleTitle'>Conocimientos:</p>
             {list[0]==null && <button ref={deseapearButton} className='divButtons rightRectangleButton' onClick={fillTecToolsDataB}>Escanear</button>}
             {list[0] && <div className='flexWord'><div>{list[0]}</div><div className='completeWord'><FaCheck/></div></div>}

@@ -121,7 +121,7 @@
   color: white;
   background-color: rgb(10, 10, 10);
   border: 6px solid rgb(110, 0, 0);
-  animation-name: apearRectangles;
+  animation-name: appearRectangles;
   animation-duration: 7s;
   animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
   animation-fill-mode: forwards;
@@ -136,7 +136,7 @@
   color: white;
   background-color: rgb(10, 10, 10);
   border: 6px solid rgb(110, 0, 0);
-  animation-name: apearRectangles;
+  animation-name: appearRectangles;
   animation-duration: 7s;
   animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
   animation-fill-mode: forwards;
@@ -151,7 +151,7 @@
   color: white;
   background-color: rgb(10, 10, 10);
   border: 6px solid rgb(110, 0, 0);
-  animation-name: apearRectangles;
+  animation-name: appearRectangles;
   animation-duration: 7s;
   animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
   animation-fill-mode: forwards;
@@ -163,10 +163,13 @@
   height: 18.5%;
   top: 75.84%;
   left: 45.85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   color: white;
   background-color: rgb(10, 10, 10);
   border: 6px solid rgb(110, 0, 0);
-  animation-name: apearRectangles;
+  animation-name: appearRectangles;
   animation-duration: 7s;
   animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
   animation-fill-mode: forwards;
@@ -184,12 +187,12 @@
   color: white;
   background-color: rgb(10, 10, 10);
   border: 6px solid rgb(110, 0, 0);
-  animation-name: apearRectangles;
+  animation-name: appearRectangles;
   animation-duration: 7s;
   animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
   animation-fill-mode: forwards;
 }
-@keyframes apearRectangles{
+@keyframes appearRectangles{
   99%{
     opacity: 0;
   }
@@ -197,7 +200,7 @@
     opacity: 1;
   }
 }
-.rectanglesApearAnimation{
+.apearAnimation{
   opacity: 0;
   animation-name: appearContentAnimation;
   animation-duration: 9s;
@@ -710,7 +713,7 @@
     opacity: 1;
   }
   80%{
-    opacity: 0;
+    opacity: 0.1;
   }
   100%{
     opacity: 1;
@@ -727,4 +730,43 @@
 .topRectangleLetterStyle{
   font-size: 1.2rem;
   padding-top: 5%;
+}
+.midRectangleLetterStyle{
+  font-size: 1.2rem;
+  padding-left: 1%;
+  padding-top: 1%;
+}
+
+.projectsContainers{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 25%;
+  color: white;
+}
+.firstProject{
+  left: 5%;
+}
+.secondProject{
+  left: 37.5%;
+}
+.thirdProject{
+  left: 70%;
+}
+.projectImg{
+  margin-top: 10%;
+  height: 65%;
+  width: 100%;
+  border: 2px solid red;
+}
+.projectName{
+  font-size: 1.2rem;
+  padding-top: 3%;
+}
+
+.icon{
+  height: 50%;
+  width: 20%;
 }
