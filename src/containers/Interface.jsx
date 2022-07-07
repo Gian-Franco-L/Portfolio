@@ -31,10 +31,10 @@ function fillTecToolsDataB(){
 
   return(
     <MainContainer ref={introInterfaceRef}>
-      <div className='topLeftArrow'></div>
+      {/* <div className='topLeftArrow'></div>
       <div className='topRightArrow'></div>
       <div className='bottomLeftArrow'></div>
-      <div className='bottomRightArrow'></div>
+      <div className='bottomRightArrow'></div> */}
       <div className='backgroundBlack'>
         {
           list[0]
@@ -52,6 +52,8 @@ function fillTecToolsDataB(){
             <div className='topRectangleLetterStyle'>Pais: Argentina</div>
             <div className='topRectangleLetterStyle'>Provincia: Buenos Aires</div>
             <div className='topRectangleLetterStyle'>Edad: 25 años</div>
+          </div>
+          <div className='topRectangleContent apearAnimation'>
             <div className='topRectangleLetterStyle'>Delito: Nula experiencia laboral en TI</div>
             <div className='topRectangleLetterStyle'>Condena: Estudiar para siempre</div>
             <div className='topRectangleLetterStyle'>Especializacion: Frontend Developer</div>
@@ -62,7 +64,7 @@ function fillTecToolsDataB(){
           <div className='midRectangleLetterStyle apearAnimation'><b>Primer contacto con la programacion: [</b> Año: 2018 --- Facultad: UTN --- Carrera: Ingenieria Electronica --- Lenguaje: C --- Tiempo: 2 años <b>]</b></div>
           <div className='midRectangleLetterStyle apearAnimation'><b>Primer contacto con la programacion web: [</b> Año: 2021 --- Curso: Plataforma5 --- Lenguajes: HTML/CSS/Javascript --- Tiempo: 3 meses <b>]</b></div>
           <div className='midRectangleLetterStyle apearAnimation'><b>Experiencia y progreso actual: [</b> Forma: Autodidacta --- Fuentes: Platzi --- Actualmente: Perfeccionando Frontend --- Tiempo: 1 año <b>]</b></div>
-          <div></div>
+          <div className='midRectangleLetterStyle apearAnimation'></div>
         </div>
         <div className='bottomLeftRectangle'>
           <div className='projectsContainers firstProject apearAnimation'>
@@ -86,7 +88,7 @@ function fillTecToolsDataB(){
         </div>
         <div className='rightRectangle'>
           <div className='apearAnimation'>
-            <p className='rightRectangleTitle'>Conocimientos:</p>
+            <p className='rightRectangleTitle'></p>
             {list[0]==null && <button ref={deseapearButton} className='divButtons rightRectangleButton' onClick={fillTecToolsDataB}>Escanear</button>}
             {list[0] && <div className='flexWord'><div>{list[0]}</div><div className='completeWord'><FaCheck/></div></div>}
             {list[1] && <div className='flexWord'><div>{list[1]}</div><div className='completeWord'><FaCheck/></div></div>}
