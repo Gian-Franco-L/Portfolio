@@ -1,42 +1,20 @@
-import React, { useState, useRef } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import '../css/Interface.css'
 import { FaCheck, FaInstagram, FaWhatsapp, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 function Interface ({ introInterfaceRef }){
   const tecToolsDataB = ["HTML", "CSS", "JavaScript", "Git/Github", "SASS", "TypeScript", "React", "NextJS", "Node", "MongoDB", "Express", "Rest API"]
-  const [list, setList] = useState([])
   let desapearLoader = document.querySelector(".divLoader")
-  let deseapearButton = useRef(null)
-  let pipe = 0
-
-function fillTecToolsDataB(){
-  new Promise (() =>{
-    if(pipe===0)
-    {
-      deseapearButton.current.style.display = "none"
-      pipe=1
-      for(let i=0; i<12; i++){
-        setTimeout(()=>{
-          setList(prev =>[tecToolsDataB[i], ...prev])
-        }, ((i+1)*1000))
-      }
-    }
-  })
-  .then(() =>{
-    pipe=0
-    desapearLoader.style.opacity = "0"
-  })
-}
 
   return(
     <MainContainer ref={introInterfaceRef}>
-      {/* <div className='topLeftArrow'></div>
-      <div className='topRightArrow'></div>
-      <div className='bottomLeftArrow'></div>
-      <div className='bottomRightArrow'></div> */}
       <div className='backgroundBlack'>
-        {
+        <div className='topLeftArrow'></div>
+        <div className='topRightArrow'></div>
+        <div className='bottomLeftArrow'></div>
+        <div className='bottomRightArrow'></div>
+        {/* {
           list[0]
           &&
           <div className='divLoader'>
@@ -44,8 +22,8 @@ function fillTecToolsDataB(){
               <img src="https://i.imgur.com/cWGLRFJ.png" alt="" />
             </div>
           </div>
-        }
-        <div className='topRectangle'>
+        } */}
+        <div className='rectangles topRectangle'>
           <div className='image'></div>
           <div className='topRectangleContent apearAnimation'>
             <div className='topRectangleLetterStyle'>Nombre: Gian Franco Lombardini</div>
@@ -54,19 +32,19 @@ function fillTecToolsDataB(){
             <div className='topRectangleLetterStyle'>Edad: 25 años</div>
           </div>
           <div className='topRectangleContent apearAnimation'>
-            <div className='topRectangleLetterStyle'>Delito: Nula experiencia laboral en TI</div>
+            <div className='topRectangleLetterStyle'>Delito: Sin experiencia laboral en TI</div>
             <div className='topRectangleLetterStyle'>Condena: Estudiar para siempre</div>
             <div className='topRectangleLetterStyle'>Especializacion: Frontend Developer</div>
             <div className='topRectangleLetterStyle'>Estado: Desempleado</div>
           </div>
         </div>
-        <div className='midRectangle'>
+        <div className='rectangles midRectangle'>
           <div className='midRectangleLetterStyle apearAnimation'><b>Primer contacto con la programacion: [</b> Año: 2018 --- Facultad: UTN --- Carrera: Ingenieria Electronica --- Lenguaje: C --- Tiempo: 2 años <b>]</b></div>
           <div className='midRectangleLetterStyle apearAnimation'><b>Primer contacto con la programacion web: [</b> Año: 2021 --- Curso: Plataforma5 --- Lenguajes: HTML/CSS/Javascript --- Tiempo: 3 meses <b>]</b></div>
           <div className='midRectangleLetterStyle apearAnimation'><b>Experiencia y progreso actual: [</b> Forma: Autodidacta --- Fuentes: Platzi --- Actualmente: Perfeccionando Frontend --- Tiempo: 1 año <b>]</b></div>
           <div className='midRectangleLetterStyle apearAnimation'></div>
         </div>
-        <div className='bottomLeftRectangle'>
+        <div className='rectangles bottomLeftRectangle'>
           <div className='projectsContainers firstProject apearAnimation'>
             <div className=' projectImg'></div>
             <div className='projectName'>Color Game</div>
@@ -80,28 +58,64 @@ function fillTecToolsDataB(){
             <div className='projectName'>Market</div>
           </div>
         </div>
-        <div className='bottomRightRectangle'>
+        <div className='rectangles bottomRightRectangle'>
             <FaWhatsapp className='icon apearAnimation'/>
             <FaInstagram className='icon apearAnimation'/>
             <FaLinkedin className='icon apearAnimation'/>
             <FaGithub className='icon apearAnimation'/>
         </div>
-        <div className='rightRectangle'>
-          <div className='apearAnimation'>
-            <p className='rightRectangleTitle'></p>
-            {list[0]==null && <button ref={deseapearButton} className='divButtons rightRectangleButton' onClick={fillTecToolsDataB}>Escanear</button>}
-            {list[0] && <div className='flexWord'><div>{list[0]}</div><div className='completeWord'><FaCheck/></div></div>}
-            {list[1] && <div className='flexWord'><div>{list[1]}</div><div className='completeWord'><FaCheck/></div></div>}
-            {list[2] && <div className='flexWord'><div>{list[2]}</div><div className='completeWord'><FaCheck/></div></div>}
-            {list[3] && <div className='flexWord'><div>{list[3]}</div><div className='completeWord'><FaCheck/></div></div>}
-            {list[4] && <div className='flexWord'><div>{list[4]}</div><div className='completeWord'><FaCheck/></div></div>}
-            {list[5] && <div className='flexWord'><div>{list[5]}</div><div className='completeWord'><FaCheck/></div></div>}
-            {list[6] && <div className='flexWord'><div>{list[6]}</div><div className='completeWord'><FaCheck/></div></div>}
-            {list[7] && <div className='flexWord'><div>{list[7]}</div><div className='completeWord'><FaCheck/></div></div>}
-            {list[8] && <div className='flexWord'><div>{list[8]}</div><div className='completeWord'><FaCheck/></div></div>}
-            {list[9] && <div className='flexWord'><div>{list[9]}</div><div className='completeWord'><FaCheck/></div></div>}
-            {list[10] && <div className='flexWord'><div>{list[10]}</div><div className='completeWord'><FaCheck/></div></div>}
-            {list[11] && <div className='flexWord'><div>{list[11]}</div><div className='completeWord'><FaCheck/></div></div>}
+        <div className='rectangles rightRectangle'>
+          <div className='apearAnimation wordCheckContainer'>
+            <div className='wordCheckContainer'>
+              <div className='checkFlex'>
+                <div className='WordCheck'>{tecToolsDataB[0]}</div>
+                <div className='absoluteCheck'><FaCheck/></div>
+              </div>
+              <div className='checkFlex'>
+                <div className='WordCheck'>{tecToolsDataB[1]}</div>
+                <div className='absoluteCheck'><FaCheck/></div>
+              </div>
+              <div className='checkFlex'>
+                <div className='WordCheck'>{tecToolsDataB[2]}</div>
+                <div className='absoluteCheck'><FaCheck/></div>
+              </div>
+              <div className='checkFlex'>
+                <div className='WordCheck'>{tecToolsDataB[3]}</div>
+                <div className='absoluteCheck'><FaCheck/></div>
+              </div>
+              <div className='checkFlex'>
+                <div className='WordCheck'>{tecToolsDataB[4]}</div>
+                <div className='absoluteCheck'><FaCheck/></div>
+              </div>
+              <div className='checkFlex'>
+                <div className='WordCheck'>{tecToolsDataB[5]}</div>
+                <div className='absoluteCheck'><FaCheck/></div>
+              </div>
+              <div className='checkFlex'>
+                <div className='WordCheck'>{tecToolsDataB[6]}</div>
+                <div className='absoluteCheck'><FaCheck/></div>
+              </div>
+              <div className='checkFlex'>
+                <div className='WordCheck'>{tecToolsDataB[7]}</div>
+                <div className='absoluteCheck'><FaCheck/></div>
+              </div>
+              <div className='checkFlex'>
+                <div className='WordCheck'>{tecToolsDataB[8]}</div>
+                <div className='absoluteCheck'><FaCheck/></div>
+              </div>
+              <div className='checkFlex'>
+                <div className='WordCheck'>{tecToolsDataB[9]}</div>
+                <div className='absoluteCheck'><FaCheck/></div>
+              </div>
+              <div className='checkFlex'>
+                <div className='WordCheck'>{tecToolsDataB[10]}</div>
+                <div className='absoluteCheck'><FaCheck/></div>
+              </div>
+              <div className='checkFlex'>
+                <div className='WordCheck'>{tecToolsDataB[11]}</div>
+                <div className='absoluteCheck'><FaCheck/></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

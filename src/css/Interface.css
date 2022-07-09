@@ -3,24 +3,24 @@
   grid-template-columns: repeat(41, 2.5%);
   grid-template-rows: repeat(21, 5%);
   grid-template-areas: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
-                       ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a . . . e e e e e e e ."
-                       ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a . . . e e e e e e e ."
-                       ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a . . . e e e e e e e ."
-                       ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a . . . e e e e e e e ."
-                       ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a . . . e e e e e e e ."
-                       ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a . . . e e e e e e e ."
-                       ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a . . . e e e e e e e ."
-                       ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . e e e e e e e ."
-                       ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b . . . e e e e e e e ."
-                       ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b . . . e e e e e e e ."
-                       ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b . . . e e e e e e e ."
-                       ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b . . . e e e e e e e ."
-                       ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b . . . e e e e e e e ."
-                       ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . e e e e e e e ."
-                       ". c c c c c c c c c c c c c c c c . . d d d d d d d d d d . . . e e e e e e e ."
-                       ". c c c c c c c c c c c c c c c c . . d d d d d d d d d d . . . e e e e e e e ."
-                       ". c c c c c c c c c c c c c c c c . . d d d d d d d d d d . . . e e e e e e e ."
-                       ". c c c c c c c c c c c c c c c c . . d d d d d d d d d d . . . e e e e e e e ."
+                       ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a . . e e e e e e e e ."
+                       ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a . . e e e e e e e e ."
+                       ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a . . e e e e e e e e ."
+                       ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a . . e e e e e e e e ."
+                       ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a . . e e e e e e e e ."
+                       ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a . . e e e e e e e e ."
+                       ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a . . e e e e e e e e ."
+                       ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . e e e e e e e e ."
+                       ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b . . e e e e e e e e ."
+                       ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b . . e e e e e e e e ."
+                       ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b . . e e e e e e e e ."
+                       ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b . . e e e e e e e e ."
+                       ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b . . e e e e e e e e ."
+                       ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . e e e e e e e e ."
+                       ". c c c c c c c c c c c c c c c c . . d d d d d d d d d d . . e e e e e e e e ."
+                       ". c c c c c c c c c c c c c c c c . . d d d d d d d d d d . . e e e e e e e e ."
+                       ". c c c c c c c c c c c c c c c c . . d d d d d d d d d d . . e e e e e e e e ."
+                       ". c c c c c c c c c c c c c c c c . . d d d d d d d d d d . . e e e e e e e e ."
                        ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .";
   height: 90vh;
   width: 100%;
@@ -133,10 +133,7 @@
   }
 }
 
-.topRectangle{
-  display: flex;
-  grid-area: a;
-  flex-wrap: wrap;
+.rectangles{
   opacity: 0;
   color: white;
   background-color: rgb(10, 10, 10);
@@ -145,59 +142,35 @@
   animation-duration: 7s;
   animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
   animation-fill-mode: forwards;
+}
+.topRectangle{
+  grid-area: a;
+  display: flex;
+  flex-wrap: wrap;
 }
 .midRectangle{
-  opacity: 0;
-  color: white;
   grid-area: b;
-  background-color: rgb(10, 10, 10);
-  border: 6px solid rgb(110, 0, 0);
-  animation-name: appearRectangles;
-  animation-duration: 7s;
-  animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  animation-fill-mode: forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .bottomLeftRectangle{
-  opacity: 0;
-  color: white;
+  grid-area: c;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  grid-area: c;
-  background-color: rgb(10, 10, 10);
-  border: 6px solid rgb(110, 0, 0);
-  animation-name: appearRectangles;
-  animation-duration: 7s;
-  animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  animation-fill-mode: forwards;
 }
 .bottomRightRectangle{
-  opacity: 0;
-  color: white;
   grid-area: d;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: rgb(10, 10, 10);
-  border: 6px solid rgb(110, 0, 0);
-  animation-name: appearRectangles;
-  animation-duration: 7s;
-  animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  animation-fill-mode: forwards;
 }
 .rightRectangle{
-  display: flex;
-  color: white;
   grid-area: e;
+  display: flex;
   flex-direction: column;
   font-size: 1.2rem;
-  opacity: 0;
-  background-color: rgb(10, 10, 10);
-  border: 6px solid rgb(110, 0, 0);
-  animation-name: appearRectangles;
-  animation-duration: 7s;
-  animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  animation-fill-mode: forwards;
 }
 @keyframes appearRectangles{
   99%{
@@ -222,62 +195,33 @@
     opacity: 1;
   }
 }
-.rightRectangleTitle{
-  font-size: 1.8rem;
-  padding-left: 21%;
-}
-.rightRectangleButton{
-  background: rgb(10, 10, 10);
-  font-size: 1rem;
-  font-weight: bold;
-  color: white;
-  border: 2px solid rgb(150, 0, 0);
-  margin-left: 25%;
-  height: 50%;
-  width: 50%;
-  cursor: pointer;
-}
-.rightRectangleButton:hover{
-  cursor: pointer;
-  box-shadow: 0 0 12px rgb(150, 0, 0);
-}
-.completeWord{
-  position: absolute;
-  left: 76.5%;
-  color: green;
-}
-.flexWord{
-  display: flex;
-  padding-top: 9.5%;
-  padding-left: 5%;
-}
 
 .topRectangleQualities{
   position: absolute;
-  width: 20px;
+  width: 50px;
   height: 6px;
   background-color: rgb(110, 0, 0);
   transform-origin: right;
   animation-fill-mode: forwards;
 }
 .topRectangleTopLine{
-  top: 8%;
-  left: 3.75%;
+  top: 9%;
+  left: 2.2%;
   transform: scaleX(0);
-  animation-name: longLineTop;
+  animation-name: topLongLineTop;
   animation-duration: 7s;
   animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
-@keyframes longLineTop{
+@keyframes topLongLineTop{
   43%{
     transform: rotate(180deg) scaleX(0);
   }
   71.5%{
-    transform: rotate(180deg) scaleX(60);
+    transform: rotate(180deg) scaleX(24.56);
   }
-  99%{
+  99.9%{
     opacity: 1;
-    transform: rotate(180deg) scaleX(60);
+    transform: rotate(180deg) scaleX(24.56);
   }
   100%{
     opacity: 0;
@@ -288,20 +232,20 @@
   top: 39.4%;
   left: 68.65%;
   transform: scaleX(0);
-  animation-name: longLineBottom;
+  animation-name: topLongLineBottom;
   animation-duration: 7s;
   animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
-@keyframes longLineBottom{
+@keyframes topLongLineBottom{
   43%{
     transform: scaleX(0);
   }
   71.5%{
-    transform: scaleX(60);
+    transform: scaleX(24.56);
   }
-  99%{
+  99.9%{
     opacity: 1;
-    transform: scaleX(60);
+    transform: scaleX(24.56);
   }
   100%{
     opacity: 0;
@@ -310,19 +254,19 @@
 }
 .topRectangleLeftLine{
   top: 39.4%;
-  left: 3.9%;
+  left: 2.38%;
   transform: rotate(90deg) scaleX(0);
-  animation-name: shortLineLeft;
+  animation-name: topShortLineLeft;
   animation-duration: 7s;
   animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
-@keyframes shortLineLeft{
+@keyframes topShortLineLeft{
   75%{
     transform: rotate(90deg) scaleX(0);
   }
-  99%{
+  99.9%{
     opacity: 1;
-    transform: rotate(90deg) scaleX(15)
+    transform: rotate(90deg) scaleX(5.8)
   }
   100%{
     opacity: 0;
@@ -330,20 +274,20 @@
   }
 }
 .topRectangleRightLine{
-  top: 8%;
+  top: 9%;
   left: 68.5%;
   transform: rotate(-90deg) scaleX(0);
-  animation-name: shortLineRight;
+  animation-name: topShortLineRight;
   animation-duration: 7s;
   animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
-@keyframes shortLineRight{
+@keyframes topShortLineRight{
   75%{
     transform: rotate(-90deg) scaleX(0);
   }
-  99%{
+  99.9%{
     opacity: 1;
-    transform: rotate(-90deg) scaleX(15);
+    transform: rotate(-90deg) scaleX(5.8);
   }
   100%{
     opacity: 0;
@@ -355,29 +299,61 @@
   position: absolute;
   width: 20px;
   height: 6px;
-  top: 47%;
+  top: 44.5%;
   background-color: rgb(110, 0, 0);
   transform-origin: right;
   animation-fill-mode: forwards;
 }
 .midRectangleTopLine{
-  left: 3.75%;
-  animation-name: longLineTop;
+  left: 3.78%;
+  animation-name: midLongLineTop;
   transform: scaleX(0);
   animation-duration: 7s;
   animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
+@keyframes midLongLineTop{
+  43%{
+    transform: rotate(180deg) scaleX(0);
+  }
+  71.5%{
+    transform: rotate(180deg) scaleX(61.45);
+  }
+  99.9%{
+    opacity: 1;
+    transform: rotate(180deg) scaleX(61.45);
+  }
+  100%{
+    opacity: 0;
+    transform: rotate(180deg) scaleX(0);
+  }
+}
 .midRectangleBottomLine{
-  top: 66.4%;
-  left: 68.65%;
+  top: 66.2%;
+  left: 70.35%;
   transform: scaleX(0);
-  animation-name: longLineBottom;
+  animation-name: midLongLineBottom;
   animation-duration: 7s;
   animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+@keyframes midLongLineBottom{
+  43%{
+    transform: scaleX(0);
+  }
+  71.5%{
+    transform: scaleX(61.5);
+  }
+  99.9%{
+    opacity: 1;
+    transform: scaleX(61.5);
+  }
+  100%{
+    opacity: 0;
+    transform: scaleX(0);
+  }
 }
 .midRectangleLeftLine{
   top: 66.4%;
-  left: 3.9%;
+  left: 3.95%;
   transform: rotate(90deg) scaleX(0);
   animation-name: midShortLineLeft;
   animation-duration: 7s;
@@ -387,9 +363,9 @@
   75%{
     transform: rotate(90deg) scaleX(0);
   }
-  99%{
+  99.9%{
     opacity: 1;
-    transform: rotate(90deg) scaleX(9.1);
+    transform: rotate(90deg) scaleX(10.5);
   }
   100%{
     opacity: 0;
@@ -397,7 +373,7 @@
   }
 }
 .midRectangleRightLine{
-  left: 68.5%;
+  left: 70.15%;
   transform: rotate(-90deg) scaleX(0);
   animation-name: midShortLineRight;
   animation-duration: 7s;
@@ -407,9 +383,9 @@
   75%{
     transform: rotate(-90deg) scaleX(0);
   }
-  99%{
+  99.9%{
     opacity: 1;
-    transform: rotate(-90deg) scaleX(9.1);
+    transform: rotate(-90deg) scaleX(10.5);
   }
   100%{
     opacity: 0;
@@ -427,7 +403,8 @@
   animation-fill-mode: forwards;
 }
 .bottomLeftRectangleTopLine{
-  left: 3.75%;
+  top: 71.3%;
+  left: 3.77%;
   animation-name: bottomLeftLineTop;
   transform: scaleX(0);
   animation-duration: 7s;
@@ -438,11 +415,11 @@
     transform: rotate(180deg) scaleX(0);
   }
   71.5%{
-    transform: rotate(180deg) scaleX(33.95);
+    transform: rotate(180deg) scaleX(35.1);
   }
-  99%{
+  99.9%{
     opacity: 1;
-    transform: rotate(180deg) scaleX(33.95);
+    transform: rotate(180deg) scaleX(35.1);
   }
   100%{
     opacity: 0;
@@ -450,8 +427,8 @@
   }
 }
 .bottomLeftRectangleBottomLine{
-  top: 91%;
-  left: 40.5%;
+  top: 88.4%;
+  left: 41.8%;
   transform: scaleX(0);
   animation-name: bottomLeftLineBottom;
   animation-duration: 7s;
@@ -462,11 +439,11 @@
     transform: scaleX(0);
   }
   71.5%{
-    transform: scaleX(33.95);
+    transform: scaleX(35.1);
   }
-  99%{
+  99.9%{
     opacity: 1;
-    transform: scaleX(33.95);
+    transform: scaleX(35.1);
   }
   100%{
     opacity: 0;
@@ -474,8 +451,8 @@
   }
 }
 .bottomLeftRectangleLeftLine{
-  top: 91%;
-  left: 3.9%;
+  top: 88.4%;
+  left: 3.95%;
   transform: rotate(90deg) scaleX(0);
   animation-name: bottomLeftShortLineLeft;
   animation-duration: 7s;
@@ -485,7 +462,7 @@
   75%{
     transform: rotate(90deg) scaleX(0);
   }
-  99%{
+  99.9%{
     opacity: 1;
     transform: rotate(90deg) scaleX(8.2);
   }
@@ -495,7 +472,8 @@
   }
 }
 .bottomLeftRectangleRightLine{
-  left: 40.3%;
+  top: 71.3%;
+  left: 41.6%;
   transform: rotate(-90deg) scaleX(0);
   animation-name: bottomLeftShortLineRight;
   animation-duration: 7s;
@@ -505,7 +483,7 @@
   75%{
     transform: rotate(-90deg) scaleX(0);
   }
-  99%{
+  99.9%{
     opacity: 1;
     transform: rotate(-90deg) scaleX(8.2);
   }
@@ -525,7 +503,8 @@
   animation-fill-mode: forwards;
 }
 .bottomRightRectangleTopLine{
-  left: 45%;
+  top: 71.3%;
+  left: 46.55%;
   animation-name: bottomRightLineTop;
   transform: scaleX(0);
   animation-duration: 7s;
@@ -536,11 +515,11 @@
     transform: rotate(180deg) scaleX(0);
   }
   71.5%{
-    transform: rotate(180deg) scaleX(21.95);
+    transform: rotate(180deg) scaleX(21.94);
   }
-  99%{
+  99.9%{
     opacity: 1;
-    transform: rotate(180deg) scaleX(21.95);
+    transform: rotate(180deg) scaleX(21.94);
   }
   100%{
     opacity: 0;
@@ -548,8 +527,8 @@
   }
 }
 .bottomRightRectangleBottomLine{
-  top: 91%;
-  left: 68.8%;
+  top: 88.5%;
+  left: 70.3%;
   transform: scaleX(0);
   animation-name: bottomRightLineBottom;
   animation-duration: 7s;
@@ -560,11 +539,11 @@
     transform: scaleX(0);
   }
   71.5%{
-    transform: scaleX(21.95);
+    transform: scaleX(21.94);
   }
-  99%{
+  99.9%{
     opacity: 1;
-    transform: scaleX(21.95);
+    transform: scaleX(21.94);
   }
   100%{
     opacity: 0;
@@ -572,15 +551,16 @@
   }
 }
 .bottomRightRectangleLeftLine{
-  top: 91%;
-  left: 45.2%;
+  top: 88.4%;
+  left: 46.72%;
   transform: rotate(90deg) scaleX(0);
   animation-name: bottomLeftShortLineLeft;
   animation-duration: 7s;
   animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 .bottomRightRectangleRightLine{
-  left: 68.6%;
+  top: 71.3%;
+  left: 70.15%;
   transform: rotate(-90deg) scaleX(0);
   animation-name: bottomLeftShortLineRight;
   animation-duration: 7s;
@@ -597,7 +577,8 @@
   animation-fill-mode: forwards;
 }
 .RightRectangleTopLine{
-  top: 8%;
+  top: 9%;
+  left: 75%;
   transform: scaleX(0);
   animation-name: rightLongLineTop;
   animation-duration: 7s;
@@ -608,11 +589,11 @@
     transform: rotate(180deg) scaleX(0);
   }
   71.5%{
-    transform: rotate(180deg) scaleX(18);
+    transform: rotate(180deg) scaleX(17.55);
   }
-  99%{
+  99.9%{
     opacity: 1;
-    transform: rotate(180deg) scaleX(18);
+    transform: rotate(180deg) scaleX(17.55);
   }
   100%{
     opacity: 0;
@@ -620,8 +601,8 @@
   }
 }
 .RightRectangleBottomLine{
-  top: 91%;
-  left: 93.5%;
+  top: 88.5%;
+  left: 94%;
   transform: scaleX(0);
   animation-name: rightLongLineBottom;
   animation-duration: 7s;
@@ -632,11 +613,11 @@
     transform: scaleX(0);
   }
   71.5%{
-    transform: scaleX(18);
+    transform: scaleX(17.55);
   }
-  99%{
+  99.9%{
     opacity: 1;
-    transform: scaleX(18);
+    transform: scaleX(17.55);
   }
   100%{
     opacity: 0;
@@ -644,8 +625,8 @@
   }
 }
 .RightRectangleLeftLine{
-  top: 91%;
-  left: 74.2%;
+  top: 88.5%;
+  left: 75.15%;
   transform: scaleX(0);
   animation-name: rightLongLineLeft;
   animation-duration: 7s;
@@ -655,9 +636,9 @@
   75%{
     transform: rotate(90deg) scaleX(0);
   }
-  99%{
+  99.9%{
     opacity: 1;
-    transform: rotate(90deg) scaleX(39.5);
+    transform: rotate(90deg) scaleX(37.8);
   }
   100%{
     opacity: 0;
@@ -665,8 +646,8 @@
   }
 }
 .RightRectangleRightLine{
-  top: 8%;
-  left: 93.35%;
+  top: 9%;
+  left: 93.85%;
   transform: scaleX(0);
   animation: rightLongLineRight 7s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
@@ -674,14 +655,54 @@
   75%{
     transform: rotate(-90deg) scaleX(0);
   }
-  99%{
+  99.9%{
     opacity: 1;
-    transform: rotate(-90deg) scaleX(39.5);
+    transform: rotate(-90deg) scaleX(37.8);
   }
   100%{
     opacity: 0;
     transform: rotate(-90deg) scaleX(0);
   }
+}
+
+.rightRectangleTitle{
+  font-size: 1.2rem;
+  padding-left: 21%;
+}
+.rightRectangleButton{
+  height: 50%;
+  width: 50%;
+  margin-left: 25%;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background: rgb(10, 10, 10);
+  border: 2px solid rgb(150, 0, 0);
+  cursor: pointer;
+}
+.rightRectangleButton:hover{
+  box-shadow: 0 0 12px rgb(150, 0, 0);
+  cursor: pointer;
+}
+.absoluteCheck{
+  position: absolute;
+  right: 5%;
+  color: green;
+  font-size: 1.5rem;
+}
+.wordCheckContainer{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 1.2rem;
+}
+.WordCheck{
+  display: flex;
+  padding-left: 5%;
+}
+.checkFlex{
+  display: flex;
 }
 
 .divLoader{
@@ -696,7 +717,7 @@
   animation-fill-mode: forwards;
 }
 @keyframes desapear{
-  99%{
+  99.9%{
     opacity: 1;
   }
   100%{
@@ -723,11 +744,10 @@
 }
 
 .image{
-  height: 70%;
-  width: 16.7%;
-  margin-top: 3%;
+  height: 77%;/*220px*/
+  width: 18%;/*223px*/
+  margin-top: 2%;
   margin-left: 3%;
-  border: 5px solid rgb(20, 0, 0);
   background-image: url("../tools/Warning.gif");
   animation: desapearImage 10s cubic-bezier(0, 1, 1, 0) infinite;
 }
@@ -746,8 +766,8 @@
   display: flex;
   justify-content: space-around;
   height: 90%;
-  width: 31%;
-  margin-left: 8%;
+  width: 33%;
+  margin-left: 4%;
   flex-direction: column;
   flex-wrap: wrap;
 }
@@ -796,6 +816,7 @@
   width: 20%;
 }
 
+/*571*/
 @media screen and (max-width: 768px){
   .projectImg{
     height: 70px;
@@ -804,6 +825,12 @@
     font-size: 1rem;
   }
   .midRectangleLetterStyle{
+    font-size: 1rem;
+  }
+  .wordCheckContainer{
+    font-size: 1rem;
+  }
+  .projectName{
     font-size: 1rem;
   }
   .backgroundBlack{
