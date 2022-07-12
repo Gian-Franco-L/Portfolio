@@ -1,0 +1,88 @@
+.topLeftArrow{
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 48%;
+  left: 49%;
+  transform: rotate(0deg) scale(0);
+  background: linear-gradient(-45deg, rgb(255, 255, 255) 50%, transparent 25%) 0px 0px;
+  background-size: 36px 35px;
+  animation: firstArrow;
+  animation-duration: 3s;
+  animation-timing-function:cubic-bezier();
+  animation-fill-mode: forwards;
+}
+@keyframes firstArrow{
+  50%{
+    transform: rotate(180deg) scale(1)
+  }
+  100%{
+    transform: rotate(180deg) translateX(866px) translateY(420px)
+  }
+}
+.topRightArrow{
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 48%;
+  left: 49.1%;
+  transform: rotate(90deg) scale(0);
+  background: linear-gradient(-45deg, rgb(255, 255, 255) 50%, transparent 25%) 0px 0px;
+  background-size: 36px 35px;
+  animation: secondArrow;
+  animation-duration: 3s;
+  animation-timing-function:cubic-bezier();
+  animation-fill-mode: forwards;
+}
+@keyframes secondArrow{
+  50%{
+    transform: rotate(-90deg) scale(1)
+  }
+  100%{
+    transform: rotate(-90deg) translateY(866px) translateX(420px)
+  }
+}
+.bottomLeftArrow{
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 48%;
+  left: 49.1%;
+  transform: rotate(-90deg) scale(0);
+  background: linear-gradient(-45deg, rgb(255, 255, 255) 50%, transparent 25%) 0px 0px;
+  background-size: 36px 35px;
+  animation: thirdArrow;
+  animation-duration: 3s;
+  animation-timing-function:cubic-bezier();
+  animation-fill-mode: forwards;
+}
+@keyframes thirdArrow{
+  50%{
+    transform: rotate(90deg) scale(1)
+  }
+  100%{
+    transform: rotate(90deg) translateY(867px) translateX(404px)
+  }
+}
+.bottomRightArrow{
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 48%;
+  left: 49%;
+  transform: rotate(180deg) scale(0);
+  background: linear-gradient(-45deg, rgb(255, 255, 255) 50%, transparent 25%) 0px 0px;
+  background-size: 36px 35px;
+  animation: fourthArrow;
+  animation-duration: 3s;
+  animation-timing-function:cubic-bezier();
+  animation-fill-mode: forwards;
+}
+@keyframes fourthArrow{
+  50%{
+    transform: rotate(0deg) scale(1)
+  }
+  100%{
+    transform: rotate(0deg) translateX(867px) translateY(404px)
+  }
+}

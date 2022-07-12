@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import Intro from './containers/Intro'
+// import Intro from './containers/Intro'
 import Interfaz from './containers/Interface'
 
 function App (){

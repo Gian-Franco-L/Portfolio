@@ -1,0 +1,9 @@
+.bottomRightRectangle{
+  grid-area: d;
+  display: flex;
+  align-items: center;
+}
+.icon{
+  height: 50%;
+  width: 50%;
+}

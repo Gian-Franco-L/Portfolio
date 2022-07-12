@@ -1,0 +1,10 @@
+.midRectangle{
+  grid-area: b;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.midRectangleLetterStyle{
+  font-size: 1.2rem;
+  padding-left: 1%;
+}

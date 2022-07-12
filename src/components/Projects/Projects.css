@@ -1,0 +1,73 @@
+.bottomLeftRectangle{
+  grid-area: c;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.projectsContainers{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 20%;
+  color: white;
+}
+.firstProject{
+  left: 2%;
+}
+.secondProject{
+  left: 15%;
+}
+.thirdProject{
+  left: 27%;
+}
+.projectImg{
+  margin-top: 20%;
+  height: 100px;
+  width: 120%;
+  border: 2px solid red;
+}
+.projectName{
+  text-align: center;
+  height: 50px;
+  width: 100%;
+  font-size: 1.2rem;
+  padding-top: 3%;
+}
+
+.divLoader{
+  z-index: 1;
+  position: absolute;
+  top: 17.5%;
+  left: 88%;
+  height: 5%;
+  width: 8%;
+  background-color: rgb(10, 10, 10);
+  animation: desapear 12s;
+  animation-fill-mode: forwards;
+}
+@keyframes desapear{
+  99.9%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+.preloader {
+  position: absolute;
+  top: 100%;
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  margin:-30px 0 0 -30px;
+  animation: spin .7s linear infinite;
+}
+@keyframes spin {
+  100% { 
+    transform: rotate(360deg);
+  }
+}
+.preloader img {
+  width: 100%;
+  filter: hue-rotate(100deg) saturate(5);
+}

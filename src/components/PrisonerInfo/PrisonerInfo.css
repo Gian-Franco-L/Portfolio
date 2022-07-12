@@ -1,0 +1,37 @@
+.topRectangle{
+  grid-area: a;
+  display: flex;
+  flex-wrap: wrap;
+}
+.image{
+  height: 77%;/*220px*/
+  width: 18%;/*223px*/
+  margin-top: 2%;
+  margin-left: 3%;
+  background-image: url("../../tools/Warning.gif");
+  animation: desapearImage 10s cubic-bezier(0, 1, 1, 0) infinite;
+}
+@keyframes desapearImage{
+  60%{
+    opacity: 1;
+  }
+  80%{
+    opacity: 0.1;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.topRectangleContent{
+  display: flex;
+  justify-content: space-around;
+  height: 90%;
+  width: 33%;
+  margin-left: 4%;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.topRectangleLetterStyle{
+  font-size: 1.2rem;
+  padding-top: 5%;
+}
