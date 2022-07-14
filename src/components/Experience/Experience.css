@@ -1,30 +1,10 @@
-.wordCheckContainer{
-  height: 100%;
+.rightRectangle{
+  grid-area: e;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
 }
-.WordCheck{
-  display: flex;
-  padding-left: 9%;
-  font-size: 1.3rem;
-}
-.checkFlex{
-  display: flex;
-}
-.absoluteCheck{
-  position: absolute;
-  right: 5%;
-  color: green;
-  font-size: 2rem;
-}
-.undefinedName{
-  color: rgb(110, 6, 6);
-}
-.toolIcon{
-  color: rgb(205, 0, 0);
-  font-size: 1.7rem;
-  animation: toolScale 4s infinite;
-}
+
 @keyframes toolScale {
   0%{
     transform: translateX(-1.5px);
@@ -49,11 +29,13 @@
     transform: translateX(-1.5px);
   }
 }
-@media screen and (max-width: 810px){
-  .absoluteCheck{
-    font-size: 1.7rem;
-  }
-  .toolIcon{
-    font-size: 1.5rem;
-  }
-}
+/* .preloader0{
+  position: absolute;
+  height: 100%;
+  padding-left: 10%;
+  background-color: rgb(10, 10, 10);
+  opacity: 0;
+  top: 0%;
+  right: 0%;
+  animation: apearDesapearLoader 4s linear;
+} */

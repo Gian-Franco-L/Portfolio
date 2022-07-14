@@ -1,0 +1,92 @@
+.checkFlex{
+  display: flex;
+}
+.wordCheck{
+  display: flex;
+  padding-left: 9%;
+  font-size: 1.4rem;
+  padding-top: 1%;
+}
+.absoluteCheck{
+  position: absolute;
+  right: 5%;
+  color: green;
+  font-size: 2rem;
+}
+.toolIconDiv{
+  height: 35px;
+  width: 35px;
+  margin-top: -37px;
+}
+.toolIcon{
+  position: absolute;
+  height: 80%;
+  width: 95%;
+  right: -5%;
+  color: rgb(205, 0, 0);
+  background-color: rgb(10, 10, 10);
+  animation: toolScale 3.5s infinite;
+  cursor: pointer;
+}
+.undefinedName{
+  position: absolute;
+  color: rgb(110, 6, 6);
+  background-color: rgb(10, 10, 10);
+  font-size: 1.4rem;
+}
+
+.preloader {
+  display: flex;
+  z-index: 100;
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  background-color: rgb(10, 10, 10);
+  top: 0%;
+  right: -5%;
+  animation: apearDesapearLoader 4s linear;
+}
+.displayNone{
+  display: none;
+}
+.preloader img {
+  margin-left: 1px;
+  width: 95%;
+  filter: hue-rotate(100deg) saturate(5);
+  animation: spin .7s linear infinite;
+}
+@keyframes spin {
+  100% { 
+    transform: rotate(360deg);
+  }
+}
+@keyframes apearDesapearLoader{
+  0%{
+    opacity: 1;
+  }
+  99.9%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 810px){
+  .absoluteCheck{
+    font-size: 1.7rem;
+  }
+  .preloader {
+    width: 30px;
+    height: 30px;
+    top: -7%;
+    padding-top: 5%;
+  }
+  .toolIconDiv{
+    height: 33px;
+    width: 30px;
+    margin-top: -33px;
+    margin-right: -3px;
+  }
+}
+
