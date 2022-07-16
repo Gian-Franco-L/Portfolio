@@ -13,14 +13,13 @@ const WordAndCheck = ({ name }) =>{
   const loaderVisibility = useRef(null)
 
   const invisibleErrors = () =>{
-    loaderVisibility.current.classList.remove("displayNone")
-    undefinedInvisible.current.style.display = "none"
-    bsToolsInvisible.current.style.opacity = 0
+    loaderVisibility.current.style.display = "inline"
+    bsToolsInvisible.current.style.display = "none"
     bsToolsInvisible.current.style.width = 0
-    console.log(loaderVisibility.current);
-    // setTimeout(() =>{
-    //   loaderVisibility.current.className.add("displayNone")
-    // }, 3000)
+    undefinedInvisible.current.classList.add("disappearUndefinedWord")
+    setTimeout(() =>{
+      loaderVisibility.current.style.opacity = 0
+    }, 2000)
   }
 
   return(
@@ -38,12 +37,14 @@ const WordAndCheck = ({ name }) =>{
         <MdOutlineCheckCircleOutline />
         {swtch === 1
          ?
-          <div className='toolIconDiv' ref={bsToolsInvisible}>
-            <BsTools className='toolIcon' onClick={invisibleErrors}/>
-            <div className='preloader displayNone' ref={loaderVisibility}>
+          <>
+            <div className='toolIconDiv' ref={bsToolsInvisible}>
+              <BsTools className='toolIcon' onClick={invisibleErrors}/>
+            </div>
+            <div className='preloader' ref={loaderVisibility}>
               <img src="https://i.imgur.com/cWGLRFJ.png" alt="" />
             </div>
-          </div>
+          </>
          :
           null
         }

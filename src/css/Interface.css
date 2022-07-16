@@ -46,7 +46,7 @@
 
 .rectangles{
   opacity: 0;
-  color: white;
+  color: rgba(255, 255, 255, 1);
   background-color: rgb(10, 10, 10);
   border: 6px solid rgb(110, 0, 0);
   animation-name: appearRectangles;

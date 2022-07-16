@@ -16,13 +16,13 @@
 .toolIconDiv{
   height: 35px;
   width: 35px;
-  margin-top: -37px;
+  margin-top: -37.5px;
 }
 .toolIcon{
   position: absolute;
   height: 80%;
   width: 95%;
-  right: -5%;
+  right: -6.4%;
   color: rgb(205, 0, 0);
   background-color: rgb(10, 10, 10);
   animation: toolScale 3.5s infinite;
@@ -36,7 +36,7 @@
 }
 
 .preloader {
-  display: flex;
+  display: none;
   z-index: 100;
   width: 34px;
   height: 34px;
@@ -44,10 +44,7 @@
   background-color: rgb(10, 10, 10);
   top: 0%;
   right: -5%;
-  animation: apearDesapearLoader 4s linear;
-}
-.displayNone{
-  display: none;
+  animation: apearDisappearLoader 4s linear;
 }
 .preloader img {
   margin-left: 1px;
@@ -60,7 +57,7 @@
     transform: rotate(360deg);
   }
 }
-@keyframes apearDesapearLoader{
+@keyframes apearDisappearLoader{
   0%{
     opacity: 1;
   }
@@ -68,6 +65,21 @@
     opacity: 1;
   }
   100%{
+    opacity: 0;
+  }
+}
+
+.disappearUndefinedWord{
+  animation: disappearUndefined 4s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes disappearUndefined{
+  50%{
+    color: rgb(10, 10, 10);
+    opacity: 1;
+  }
+  100%{
+    color: rgb(10, 10, 10);
     opacity: 0;
   }
 }
@@ -87,6 +99,9 @@
     width: 30px;
     margin-top: -33px;
     margin-right: -3px;
+  }
+  .toolIcon{
+    right: -5%;
   }
 }
 

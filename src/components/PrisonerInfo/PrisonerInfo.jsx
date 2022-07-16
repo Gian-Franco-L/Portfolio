@@ -13,7 +13,7 @@ const PrisonerInfo = () =>{
       </div>
       <div className='topRectangleContent apearAnimation'>
         <div className='topRectangleLetterStyle'>Delito: Sin experiencia laboral en TI</div>
-        <div className='topRectangleLetterStyle'>Condena: Estudiar para siempre</div>
+        <div className='topRectangleLetterStyle'>Condena:</div>
         <div className='topRectangleLetterStyle'>Especializacion: Frontend Developer</div>
         <div className='topRectangleLetterStyle'>Estado: Desempleado</div>
       </div>
