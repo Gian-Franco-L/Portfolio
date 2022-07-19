@@ -22,7 +22,7 @@
                        ". c c c c c c c c c c c c c c c c . d d d d d d d d d d d . e e e e e e e e e ."
                        ". c c c c c c c c c c c c c c c c . d d d d d d d d d d d . e e e e e e e e e ."
                        ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .";
-  height: 90vh;
+  height: 91vh;
   width: 100%;
   margin-left: 2%;
   margin-right: 2%;
@@ -101,6 +101,7 @@
   .interfaceBlack{
     grid-template-columns: repeat(31, 3.22%);
     grid-template-rows: repeat(39, 2.56%);
+    height: 95vh;
     grid-template-areas: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
                          ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a a ."
                          ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a a ."

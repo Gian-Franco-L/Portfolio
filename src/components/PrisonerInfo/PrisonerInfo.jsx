@@ -4,7 +4,10 @@ import './PrisonerInfo.css'
 const PrisonerInfo = () =>{
   return(
     <div className='rectangles topRectangle'>
-      <div className='image'></div>
+      <div className='image '>
+        <div className='imgError'>null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null</div>
+        <div className=''></div>
+      </div>
       <div className='topRectangleContent apearAnimation'>
         <div className='topRectangleLetterStyle'>Nombre: Gian Franco Lombardini</div>
         <div className='topRectangleLetterStyle'>Pais: Argentina</div>

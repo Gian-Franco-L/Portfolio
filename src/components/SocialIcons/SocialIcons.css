@@ -1,9 +1,100 @@
 .bottomRightRectangle{
   grid-area: d;
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.iconContainer{
+  height: 50%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-right: 3%
 }
 .icon{
-  height: 50%;
-  width: 50%;
+  height: 77%;
+  width: 77%;
+}
+.socialName{
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.undefinedCurriculumIcon{
+  position: absolute;
+  color: rgb(110, 6, 6);
+  background-color: rgb(10, 10, 10);
+  font-size: 1rem;
+  top: 85%;
+  height: 9%;
+}
+.toolIconCurriculum{
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  color: rgb(205, 0, 0);
+  background-color: rgb(10, 10, 10);
+  animation: toolScale 3.5s infinite;
+  cursor: pointer;
+  right: -55%;
+  top: 32%;
+}
+
+.preloaderCurriculum {
+  display: none;
+  z-index: 100;
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  background-color: rgb(10, 10, 10);
+  right: -59%;
+  top: 28%;
+  animation: apearDisappearLoader 4s linear;
+}
+.preloaderCurriculum img {
+  margin-left: 1px;
+  width: 95%;
+  filter: hue-rotate(100deg) saturate(5);
+  animation: spin .7s linear infinite;
+}
+@keyframes spin {
+  100% { 
+    transform: rotate(360deg);
+  }
+}
+@keyframes apearDisappearLoader{
+  0%{
+    opacity: 1;
+  }
+  99.9%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.disappearUndefinedWordd{
+  animation: disappearUndefinedd 4s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes disappearUndefinedd{
+  50%{
+    color: rgb(10, 10, 10);
+    opacity: 1;
+  }
+  100%{
+    color: rgb(10, 10, 10);
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 845px){
+  .undefinedCurriculumIcon{
+    font-size: 1rem;
+    top: 88%;
+  }
 }

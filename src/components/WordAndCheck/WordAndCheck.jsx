@@ -42,7 +42,7 @@ const WordAndCheck = ({ name }) =>{
               <BsTools className='toolIcon' onClick={invisibleErrors}/>
             </div>
             <div className='preloader' ref={loaderVisibility}>
-              <img src="https://i.imgur.com/cWGLRFJ.png" alt="" />
+              <img src="https://i.imgur.com/cWGLRFJ.png" alt="loader" />
             </div>
           </>
          :

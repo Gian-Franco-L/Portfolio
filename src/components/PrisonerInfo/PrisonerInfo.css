@@ -9,6 +9,8 @@
   margin-top: 2%;
   margin-left: 3%;
   background-image: url("../../tools/Warning.gif");
+}
+.imgAnimation{
   animation: desapearImage 10s cubic-bezier(0, 1, 1, 0) infinite;
 }
 @keyframes desapearImage{
@@ -33,5 +35,14 @@
 }
 .topRectangleLetterStyle{
   font-size: 1.2rem;
+  padding-top: 5%;
+}
+
+.imgError{
+  color: rgb(110, 6, 6);
+  background-color: rgb(10, 10, 10);
+  height: 100%;
+  width: 100%;
+  word-wrap: break-word;
   padding-top: 5%;
 }
