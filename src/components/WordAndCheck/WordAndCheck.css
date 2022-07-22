@@ -21,12 +21,31 @@
 .toolIcon{
   position: absolute;
   height: 80%;
-  width: 95%;
-  right: -6.4%;
-  color: rgb(205, 0, 0);
+  width: 100%;
+  right: -3%;
+  color: rgb(125, 125, 125);
   background-color: rgb(10, 10, 10);
   animation: toolScale 3.5s infinite;
   cursor: pointer;
+}
+@keyframes toolScale {
+
+  50%{
+    transform: scale(1);
+  }
+  60%{
+    transform: scale(1.2);
+  }
+  70%{
+    transform: scale(1);
+  }
+  80%{
+    transform: scale(1.2);
+  }
+  90%{
+    transform: scale(1);
+
+  }
 }
 .undefinedName{
   position: absolute;
@@ -85,6 +104,9 @@
 }
 
 @media screen and (max-width: 810px){
+  .wordCheck{
+    font-size: 1.2rem;
+  }
   .absoluteCheck{
     font-size: 1.7rem;
   }

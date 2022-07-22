@@ -6,7 +6,6 @@ import Journey from '../components/Journey/Journey'
 import Projects from '../components/Projects/Projects'
 import SocialIcons from '../components/SocialIcons/SocialIcons'
 import Experience from '../components/Experience/Experience'
-import RectanglesAnimation from '../components/RectanglesAnimation/RectanglesAnimation'
 import '../css/Interface.css'
 
 function Interface ({ introInterfaceRef }){
@@ -20,7 +19,6 @@ function Interface ({ introInterfaceRef }){
         <SocialIcons />
         <Experience />
       </div>
-      <RectanglesAnimation />
     </MainContainer>
   )
 }

@@ -1,88 +1,151 @@
-.topLeftArrow{
+.arrows{
   position: absolute;
   width: 35px;
   height: 35px;
   top: 48%;
   left: 49%;
-  transform: rotate(0deg) scale(0);
+  opacity: 0;
   background: linear-gradient(-45deg, rgb(255, 255, 255) 50%, transparent 25%) 0px 0px;
   background-size: 36px 35px;
-  animation: firstArrow;
-  animation-duration: 3s;
-  animation-timing-function:cubic-bezier();
-  animation-fill-mode: forwards;
+  animation: 1.5s forwards linear;
+  animation-name: insideArrowAnimation;
 }
-@keyframes firstArrow{
+.insideTopArrow{
+  top: 42%;
+  transform: rotate(225deg);
+  animation-name: insideArrowAnimation;
+}
+.insideRightArrow{
+  left: 52%;
+  transform: rotate(-45deg);
+  animation-name: insideArrowAnimation;
+}
+.insideLeftArrow{
+  left: 46%;
+  transform: rotate(135deg);
+  animation-name: insideArrowAnimation;
+}
+.insideBottomArrow{
+  top: 54%;
+  transform: rotate(45deg);
+  animation-name: insideArrowAnimation;
+}
+@keyframes insideArrowAnimation{
+  0%{
+    opacity: 0;
+  }
+  20%{
+    opacity: 1;
+  }
+  40%{
+    opacity: 0;
+  }
+}
+
+.middleTopArrow{
+  top: 30%;
+  transform: rotate(225deg);
+  animation-name: middleArrowAnimation;
+}
+.middleRightArrow{
+  left: 59%;
+  transform: rotate(-45deg);
+  animation-name: middleArrowAnimation;
+}
+.middleLeftArrow{
+  left: 39%;
+  transform: rotate(135deg);
+  animation-name: middleArrowAnimation;
+}
+.middleBottomArrow{
+  top: 66%;
+  transform: rotate(45deg);
+  animation-name: middleArrowAnimation;
+}
+@keyframes middleArrowAnimation{
+  30%{
+    opacity: 0;
+  }
   50%{
-    transform: rotate(180deg) scale(1)
+    opacity: 1;
+  }
+  70%{
+    opacity: 0;
+  }
+}
+
+.outsideTopArrow{
+  top: 18%;
+  transform: rotate(225deg);
+  animation-name: outsideArrowAnimation;
+}
+.outsideRightArrow{
+  left: 68%;
+  transform: rotate(-45deg);
+  animation-name: outsideArrowAnimation;
+}
+.outsideLeftArrow{
+  left: 30%;
+  transform: rotate(135deg);
+  animation-name: outsideArrowAnimation;
+}
+.outsideBottomArrow{
+  top: 78%;
+  transform: rotate(45deg);
+  animation-name: outsideArrowAnimation;
+}
+@keyframes outsideArrowAnimation{
+  60%{
+    opacity: 0;
+  }
+  80%{
+    opacity: 1;
   }
   100%{
-    transform: rotate(180deg) translateX(866px) translateY(420px)
+    opacity: 0;
   }
 }
-.topRightArrow{
-  position: absolute;
-  width: 35px;
-  height: 35px;
-  top: 48%;
-  left: 49.1%;
-  transform: rotate(90deg) scale(0);
-  background: linear-gradient(-45deg, rgb(255, 255, 255) 50%, transparent 25%) 0px 0px;
-  background-size: 36px 35px;
-  animation: secondArrow;
-  animation-duration: 3s;
-  animation-timing-function:cubic-bezier();
-  animation-fill-mode: forwards;
-}
-@keyframes secondArrow{
-  50%{
-    transform: rotate(-90deg) scale(1)
+
+@media screen and (max-width: 845px){
+  .insideRightArrow{
+    left: 56%;
   }
-  100%{
-    transform: rotate(-90deg) translateY(866px) translateX(420px)
+  .insideLeftArrow{
+    left: 42%;
   }
-}
-.bottomLeftArrow{
-  position: absolute;
-  width: 35px;
-  height: 35px;
-  top: 49%;
-  left: 49.1%;
-  transform: rotate(-90deg) scale(0);
-  background: linear-gradient(-45deg, rgb(255, 255, 255) 50%, transparent 25%) 0px 0px;
-  background-size: 36px 35px;
-  animation: thirdArrow;
-  animation-duration: 3s;
-  animation-timing-function:cubic-bezier();
-  animation-fill-mode: forwards;
-}
-@keyframes thirdArrow{
-  50%{
-    transform: rotate(90deg) scale(1)
+  .middleRightArrow{
+    left: 64%;
   }
-  100%{
-    transform: rotate(90deg) translateY(867px) translateX(404px)
+  .middleLeftArrow{
+    left: 34%;
+  }
+  .outsideRightArrow{
+    left: 72%;
+  }
+  .outsideLeftArrow{
+    left: 26%;
   }
 }
-.bottomRightArrow{
-  position: absolute;
-  width: 35px;
-  height: 35px;
-  top: 49%;
-  left: 49%;
-  transform: rotate(180deg) scale(0);
-  background: linear-gradient(-45deg, rgb(255, 255, 255) 50%, transparent 25%) 0px 0px;
-  background-size: 36px 35px;
-  animation: fourthArrow;
-  animation-duration: 3s;
-  animation-timing-function:cubic-bezier();
-  animation-fill-mode: forwards;
-}
-@keyframes fourthArrow{
-  50%{
-    transform: rotate(0deg) scale(1)
+@media screen and (max-width: 530px){
+  .arrows{
+    left: 46%;
   }
-  100%{
-    transform: rotate(0deg) translateX(867px) translateY(404px)
+  .insideRightArrow{
+    left: 56%;
+  }
+  .insideLeftArrow{
+    left: 36%;
+  }
+  .middleRightArrow{
+    left: 66%;
+  }
+  .middleLeftArrow{
+    left: 27%;
+  }
+  .outsideRightArrow{
+    left: 77%;
+  }
+  .outsideLeftArrow{
+    left: 15%;
   }
 }

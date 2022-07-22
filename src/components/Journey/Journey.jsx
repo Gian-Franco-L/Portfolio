@@ -11,7 +11,7 @@ const Journey = () =>{
         <b>Primer contacto con la programacion web: [</b> Año: 2021 --- Curso: Plataforma5 --- Lenguajes: HTML/CSS/Javascript --- Tiempo: 3 meses <b>]</b>
       </div>
       <div className='midRectangleLetterStyle apearAnimation'>
-        <b>Experiencia y progreso actual: [</b> Forma: Autodidacta --- Fuentes: Platzi --- Actualmente: Perfeccionando Frontend --- Tiempo: 1 año <b>]</b>
+        <b>Experiencia y progreso actual: [</b> Forma: Autodidacta --- Fuentes: Platzi --- Actualmente: Perfeccionando React --- Tiempo: 1 año <b>]</b>
       </div>
     </div>
   )

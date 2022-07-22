@@ -40,13 +40,17 @@ const SocialIcons = () =>{
       <div className='iconContainer apearAnimation'>
         <BsFillFileEarmarkPdfFill className='icon apearAnimation'/>
         <div className='undefinedCurriculumIcon' ref={errorInvisible}>
-          <div>Error Error<br/>Error Error<br/>Error Error<br/>Error Error</div>
-          <div ref={toolsInvisible}><BsTools className='toolIconCurriculum' onClick={invisibleErrors}/></div>
-          <div className='preloaderCurriculum' ref={loaderVisibility}>
-            <img src="https://i.imgur.com/cWGLRFJ.png" alt="loader"/></div>
-          </div>
+          <div>Error Error<br/>Error Error<br/>Error Error<br/>Undefined</div>
+        </div>
         <div className='socialName'>Curriculum</div>
       </div>
+      
+      <div className='toolDivIconCurriculum' ref={toolsInvisible}>
+        <BsTools className='toolIconCurriculum' onClick={invisibleErrors}/>
+      </div>
+      <div className='preloaderCurriculum' ref={loaderVisibility}>
+          <img src="https://i.imgur.com/cWGLRFJ.png" alt="loader"/>
+        </div>
     </div>
   )
 }

@@ -4,8 +4,8 @@ import './PrisonerInfo.css'
 const PrisonerInfo = () =>{
   return(
     <div className='rectangles topRectangle'>
-      <div className='image '>
-        <div className='imgError'>null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null null</div>
+      <div className='image imgAnimation'>
+        <div className='imgError'>Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error Error</div>
         <div className=''></div>
       </div>
       <div className='topRectangleContent apearAnimation'>

@@ -9,8 +9,8 @@
                        ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a . e e e e e e e e e ."
                        ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a . e e e e e e e e e ."
                        ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a . e e e e e e e e e ."
-                       ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a . e e e e e e e e e ."
                        ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . e e e e e e e e e ."
+                       ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b . e e e e e e e e e ."
                        ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b . e e e e e e e e e ."
                        ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b . e e e e e e e e e ."
                        ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b . e e e e e e e e e ."
@@ -32,7 +32,7 @@
   transform: scale(0);
   animation: container;
   animation-duration: 3s;
-  animation-timing-function:cubic-bezier();
+  animation-timing-function: cubic-bezier();
   animation-fill-mode: forwards;
 }
 @keyframes container{
@@ -40,38 +40,20 @@
     transform: scale(0);
   }
   100%{
-    transform: scale(0.99);
+    transform: scale(1);
   }
 }
 
 .rectangles{
-  opacity: 0;
   color: rgba(255, 255, 255, 1);
+  opacity: 0;
   background-color: rgb(10, 10, 10);
   border: 6px solid rgb(110, 0, 0);
-  animation-name: appearRectangles;
-  animation-duration: 7s;
-  animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  animation-fill-mode: forwards;
+  animation: rectangleAnimation 5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
-@keyframes appearRectangles{
-  99%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-}
-.apearAnimation{
-  opacity: 0;
-  animation-name: appearContentAnimation;
-  animation-duration: 9s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-}
-@keyframes appearContentAnimation{
-  78%{
-    opacity: 0;
+@keyframes rectangleAnimation {
+  40%{
+    opacity: 0.2;
   }
   100%{
     opacity: 1;
@@ -113,8 +95,8 @@
                          ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a a ."
                          ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a a ."
                          ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a a ."
-                         ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a a ."
                          ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+                         ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b b ."
                          ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b b ."
                          ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b b ."
                          ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b b ."
