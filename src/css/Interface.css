@@ -8,8 +8,8 @@
                        ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a . e e e e e e e e e ."
                        ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a . e e e e e e e e e ."
                        ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a . e e e e e e e e e ."
-                       ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a . e e e e e e e e e ."
                        ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . e e e e e e e e e ."
+                       ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b . e e e e e e e e e ."
                        ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b . e e e e e e e e e ."
                        ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b . e e e e e e e e e ."
                        ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b . e e e e e e e e e ."
@@ -22,7 +22,7 @@
                        ". c c c c c c c c c c c c c c c c . d d d d d d d d d d d . e e e e e e e e e ."
                        ". c c c c c c c c c c c c c c c c . d d d d d d d d d d d . e e e e e e e e e ."
                        ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .";
-  height: 91vh;
+  height: 92vh;
   width: 100%;
   margin-left: 2%;
   margin-right: 2%;
@@ -49,6 +49,7 @@
   opacity: 0;
   background-color: rgb(10, 10, 10);
   border: 6px solid rgb(110, 0, 0);
+  box-shadow: 0px 0px 10px 1px rgb(100, 0, 0);
   animation: rectangleAnimation 5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
 @keyframes rectangleAnimation {
@@ -123,5 +124,61 @@
                          ". d d d d d d d d d d d d d d d d . . e e e e e e e e e e e ."
                          ". d d d d d d d d d d d d d d d d . . e e e e e e e e e e e ."
                          ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .";
+  }
+}
+
+@media screen and (max-width: 630px){
+  .interfaceBlack{
+    grid-template-columns: repeat(40, 2.5%);
+    grid-template-rows: repeat(47, 2.127%);
+    height: 160vh;
+    grid-template-areas: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+                         ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a ."
+                         ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a ."
+                         ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a ."
+                         ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a ."
+                         ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a ."
+                         ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a ."
+                         ". a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a ."
+                         ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+                         ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b ."
+                         ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b ."
+                         ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b ."
+                         ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b ."
+                         ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b ."
+                         ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b ."
+                         ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b ."
+                         ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b ."
+                         ". b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b ."
+                         ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+                         ". e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e ."
+                         ". e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e ."
+                         ". e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e ."
+                         ". e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e ."
+                         ". e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e ."
+                         ". e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e ."
+                         ". e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e ."
+                         ". e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e ."
+                         ". e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e ."
+                         ". e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e ."
+                         ". e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e ."
+                         ". e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e ."
+                         ". e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e ."
+                         ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+                         ". c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c ."
+                         ". c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c ."
+                         ". c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c ."
+                         ". c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c ."
+                         ". c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c ."
+                         ". c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c ."
+                         ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+                         ". d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d ."
+                         ". d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d ."
+                         ". d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d ."
+                         ". d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d ."
+                         ". d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d ."
+                         ". d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d ."
+                         ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+                         ;
   }
 }

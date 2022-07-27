@@ -8,3 +8,64 @@
   font-size: 1.2rem;
   padding-left: 1%;
 }
+
+.toolDivIconJourney{
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  top: 39%;
+  right: 26.8%;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: visible;
+  animation: toolScale 3.5s infinite;
+}
+.toolIconJourney{
+  height: 25px;
+  width: 25px;
+  color: rgb(130, 130, 130);
+}
+
+.preloaderJourney {
+  display: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 39%;
+  right: 26.8%;
+  border-radius: 50%;
+  animation: apearDisappearLoaders 4s linear;
+}
+.preloaderJourney img {
+  width: 95%;
+  margin-left: 1px;
+  filter: hue-rotate(100deg) saturate(5);
+  animation: spin .7s linear infinite;
+}
+@keyframes spin {
+  100% { 
+    transform: rotate(360deg);
+  }
+}
+@keyframes apearDisappearLoaders{
+  0%{
+    opacity: 1;
+  }
+  99.9%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 845px){
+  .toolDivIconJourney{
+    top: 30%;
+    right: 2%;
+  }
+  .preloaderJourney {
+    top: 30%;
+    right: 2%;
+  }
+}

@@ -38,7 +38,6 @@
   top: 74%;
   right: 26.8%;
   border-radius: 50%;
-  background-color: rgb(10, 10, 10);
   cursor: pointer;
   overflow: visible;
   animation: toolScale 3.5s infinite;
@@ -46,7 +45,7 @@
 .toolIconCurriculum{
   height: 25px;
   width: 25px;
-  color: rgb(125, 125, 125);
+  color: rgb(130, 130, 130);
 }
 
 .preloaderCurriculum {
@@ -57,7 +56,6 @@
   top: 73.7%;
   right: 26.8%;
   border-radius: 50%;
-  background-color: rgb(10, 10, 10);
   animation: apearDisappearLoader 4s linear;
 }
 .preloaderCurriculum img {
@@ -83,7 +81,7 @@
   }
 }
 
-.disappearUndefinedWordd{
+.disappearUndefinedWord{
   animation: disappearUndefinedd 4s linear;
   animation-fill-mode: forwards;
 }
@@ -102,5 +100,16 @@
   .undefinedCurriculumIcon{
     font-size: 1rem;
     top: 88%;
+  }
+}
+
+@media screen and (max-width: 845px){
+  .toolDivIconCurriculum{
+    top: 78.6%;
+    left: 52.8%;
+  }
+  .preloaderCurriculum{
+    top: 78.6%;
+    left: 52.8%;
   }
 }

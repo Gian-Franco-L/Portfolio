@@ -10,11 +10,10 @@ const SocialIcons = () =>{
   const loaderVisibility = useRef(null)
 
   const invisibleErrors = () =>{
-    console.log("hola");
     loaderVisibility.current.style.display = "inline"
     toolsInvisible.current.style.display = "none"
     toolsInvisible.current.style.width = 0
-    errorInvisible.current.classList.add("disappearUndefinedWordd")
+    errorInvisible.current.classList.add("disappearUndefinedWord")
     setTimeout(() =>{
       loaderVisibility.current.style.opacity = 0
     }, 2000)
@@ -44,13 +43,12 @@ const SocialIcons = () =>{
         </div>
         <div className='socialName'>Curriculum</div>
       </div>
-      
       <div className='toolDivIconCurriculum' ref={toolsInvisible}>
         <BsTools className='toolIconCurriculum' onClick={invisibleErrors}/>
       </div>
       <div className='preloaderCurriculum' ref={loaderVisibility}>
           <img src="https://i.imgur.com/cWGLRFJ.png" alt="loader"/>
-        </div>
+      </div>
     </div>
   )
 }

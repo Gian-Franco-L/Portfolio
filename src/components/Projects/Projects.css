@@ -20,11 +20,34 @@
 .thirdProject{
   left: 27%;
 }
-.projectImg{
+.projectErrorContainer{
   margin-top: 20%;
   height: 100px;
   width: 120%;
   border: 2px solid red;
+}
+.projectErrorGif{
+  height: 100px;
+  width: 100%;
+  background: url("../../tools/interference.gif");
+  background-size: cover;
+}
+.projectImg{
+  height: 100px;
+  width: 100%;
+  background: url("../../tools/1.gif");
+  background-size: cover;
+}
+.projectImgAnimation{
+  animation: apearImg 4s linear forwards;
+}
+@keyframes apearImg {
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 .projectName{
   text-align: center;
@@ -32,4 +55,67 @@
   width: 100%;
   font-size: 1.2rem;
   padding-top: 3%;
+}
+
+.toolDivIconProjects{
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  top: 74%;
+  right: 56.9%;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: visible;
+  animation: toolScale 3.5s infinite;
+}
+.toolIconProjects{
+  height: 25px;
+  width: 25px;
+  color: rgb(130, 130, 130);
+}
+
+.preloaderProjects {
+  display: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 73.7%;
+  right: 56.9%;
+  border-radius: 50%;
+  animation: apearDisappearLoaders 4s linear;
+}
+.preloaderProjects img {
+  width: 95%;
+  margin-left: 1px;
+  filter: hue-rotate(100deg) saturate(5);
+  animation: spin .7s linear infinite;
+}
+@keyframes spin {
+  100% { 
+    transform: rotate(360deg);
+  }
+}
+@keyframes apearDisappearLoaders{
+  0%{
+    opacity: 1;
+  }
+  99.9%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+
+
+@media screen and (max-width: 845px){
+  .toolDivIconProjects{
+    top: 55.6%;
+    left: 52.8%;
+  }
+  .preloaderProjects{
+    top: 55.6%;
+    left: 52.8%;
+  }
 }
