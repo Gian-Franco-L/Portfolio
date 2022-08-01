@@ -1,14 +1,15 @@
 .topRectangle{
   grid-area: a;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .image{
-  height: 77%;/*220px*/
-  width: 18%;/*223px*/
+  height: 200px;/*220px*/
+  width: 223px;/*223px*/
   margin-top: 2%;
   margin-left: 3%;
   background-image: url("../../tools/Warning.gif");
+  background-size: cover;
 }
 .imgAnimation{
   animation: desapearImage 8s cubic-bezier(0, 1, 1, 0) infinite;
@@ -18,33 +19,34 @@
     opacity: 1;
   }
   75%{
-    opacity: 0.1;
+    opacity: 0;
   }
   100%{
     opacity: 1;
   }
 }
+.contentDiv{
+  display: flex;
+  width: 71%;
+}
 .topRectangleContent{
   display: flex;
-  height: 90%;
-  width: 14%;
-  margin-left: 5%;
+  height: 100%;
+  width: 100%;
   flex-direction: column;
-  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .topRectangleLetterStyle{
   font-size: 1.2rem;
-  padding-top: 20%;
 }
 
 .imgError{
-  display: none;
   color: rgb(110, 6, 6);
   background-color: rgb(10, 10, 10);
   height: 100%;
   width: 100%;
   word-wrap: break-word;
-  /* overflow: hidden; */
+  text-align: center;
 }
 
 .toolDivIconPrisoner{
@@ -52,7 +54,7 @@
   height: 25px;
   width: 25px;
   top: 4%;
-  right: 26.8%;
+  right: 24.4%;
   border-radius: 50%;
   cursor: pointer;
   overflow: visible;
@@ -70,7 +72,7 @@
   width: 30px;
   height: 30px;
   top: 4%;
-  right: 26.8%;
+  right: 24.4%;
   border-radius: 50%;
   animation: apearDisappearLoaders 4s linear;
 }
@@ -93,6 +95,20 @@
     opacity: 1;
   }
   100%{
+    opacity: 0;
+  }
+}
+.disappearError{
+  animation: disappearUndefinedd 4s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes disappearUndefinedd{
+  50%{
+    color: rgb(10, 10, 10);
+    opacity: 1;
+  }
+  100%{
+    color: rgb(10, 10, 10);
     opacity: 0;
   }
 }

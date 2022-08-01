@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 // import Intro from './containers/Intro'
-import Interfaz from './containers/Interface'
+import Interface from './containers/Interface'
 
 function App (){
   const introInterfaceRef = useRef(null)
@@ -9,7 +9,7 @@ function App (){
       {/* <Intro
         introInterfaceRef={introInterfaceRef}
       /> */}
-      <Interfaz
+      <Interface
         introInterfaceRef={introInterfaceRef}
       />
     </div>

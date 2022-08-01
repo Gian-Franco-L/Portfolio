@@ -14,7 +14,7 @@
   height: 25px;
   width: 25px;
   top: 39%;
-  right: 26.8%;
+  right: 24.4%;
   border-radius: 50%;
   cursor: pointer;
   overflow: visible;
@@ -32,7 +32,7 @@
   width: 30px;
   height: 30px;
   top: 39%;
-  right: 26.8%;
+  right: 24.4%;
   border-radius: 50%;
   animation: apearDisappearLoaders 4s linear;
 }

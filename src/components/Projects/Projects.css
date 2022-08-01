@@ -24,7 +24,7 @@
   margin-top: 20%;
   height: 100px;
   width: 120%;
-  border: 2px solid red;
+  border: 2px solid rgb(100, 0, 0);
 }
 .projectErrorGif{
   height: 100px;

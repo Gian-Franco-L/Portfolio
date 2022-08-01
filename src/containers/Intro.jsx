@@ -15,7 +15,7 @@ function Intro ({ introInterfaceRef }){
       containerRef.current.style.display = "none"
     }, 1500)
     setTimeout(() =>{
-      introInterfaceRef.current.style.display = "inline"
+      introInterfaceRef.current.style.display = "flex"
     }, 3000)
   }
 
